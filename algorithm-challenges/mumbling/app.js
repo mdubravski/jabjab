@@ -1,7 +1,7 @@
 /**
  * 
  * code to make input "abcd" -> "A-Bb-Ccc-Dddd-..."
- * 
+ * kata: https://www.codewars.com/kata/5667e8f4e3f572a8f2000039/train/javascript
  */
 
 function repeatAndCapitalize(str, num){
@@ -12,11 +12,19 @@ function repeatAndCapitalize(str, num){
     return ret.charAt(0).toUpperCase() + ret.slice(1);
 }
 
+function repeatAndCapitalize1(str, num){
+    let ret = "";
+    for(let i=0; i< num; i++){
+        ret += i === 0 ? str.toUpperCase() : str.toLowerCase();
+    }
+    return ret;
+}
+
 function mumbling1(str){
     let letters = str.split("");
     let ret = [];
     for(let i = 0; i< letters.length; i++){
-        ret.push(repeatAndCapitalize(letters[i], i+1));
+        ret.push(repeatAndCapitalize1(letters[i], i+1));
     }
     return ret.join("-");
 }
@@ -26,7 +34,14 @@ function mumbling2(str){
 }
 
 function mumbling3(str){
-
+    let ret = [];
+    let letters = str.split("");
+    let count = 1;
+    for(let l of letters){
+        ret.push(repeatAndCapitalize1(l, count));
+        count++;
+    }
+    return ret.join("-");
 }
 
 console.log(mumbling1("ZkGfaeR"));
