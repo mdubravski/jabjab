@@ -1,0 +1,14 @@
+.red-giant{
+    color: red;
+    font-size: 60px;
+    font-family: sans-serif;
+}
+
+span:hover{
+    color: dodgerblue;
+    text-shadow: 2px 1px blue;
+}
+
+.on{
+    background-color: yellow;
+}
