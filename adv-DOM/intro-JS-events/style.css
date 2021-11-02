@@ -1,0 +1,38 @@
+body{
+    font-family: 'consolas';
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    font-family: 'consolas';
+    position: relative;
+    left: 150px;
+    top: 25px;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    color: white;
+}
+
+button:hover{
+    background-color: #44C4FF;
+}
+
+
+input{
+    font-family: 'consolas';
+}
+
+.box{
+    padding: 10px;
+    border: solid 2px #000000;
+    background-color: beige;
+}
+
+.email-wrapper{
+    text-align: center;
+}
+
+
