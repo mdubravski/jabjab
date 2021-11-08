@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Lato, sans-serif;
+    background-color: #d7d1c7;
+}
+
+.content{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.trigger{
+    display: block;
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    border-style: none;
+    background-color: #282e3c;
+    color: #fff;
+}
+
+.trigger:hover{
+    cursor: pointer;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 0px;
+}
+
+.modal__content{
+    background-color: #2e3342;
+    width: 80%;
+    max-width: 640px;
+    margin: 3rem auto;
+    border-radius: 4px;
+    padding: 4rem 2rem;
+    position: relative;
+    animation: 0.3s slideDown;
+}
+
+.open{
+    display: block;
+}
+
+@keyframes slideDown{
+    from{
+        top: -100px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.modal__title{
+    text-align: center;
+    color: #fff;
+}
+
+.close{
+    position: absolute;
+    color: #ded9d2;
+    top: 0px;
+    left: 10px;
+    font-size: 4rem;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
+.modal__body{
+    padding: 2rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.form{
+    margin-top: 2rem;
+}
+
+.form__email{
+    color: #ddd7ce;
+    width: 100%;
+    display: block;
+    border: 3px solid #ddd7ce;
+    outline: none;
+    font-size: 1rem;
+    padding: 1rem;
+    background: transparent;
+}
+
+.form__submit{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    background: #eee;
+    font-size: 1.4rem;
+    color: #2c3344;
+    padding: .6rem 1.2rem;
+    font-weight: bold;
+    border: 0;
+    border-radius: 4px;
+    outline: 0;
+}
+
+.form__submit:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+::placeholder{
+    color: #ddd7ce;
+}
