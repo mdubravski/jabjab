@@ -12,8 +12,8 @@ const dots = document.querySelectorAll('.dice__dot');
 
 
 rollBtn.addEventListener('click', () => {
-    let roll = rollDice();
-    console.log(roll);
+    const roll = rollDice();
+   // console.log(roll);
     
     // reset styling
     for(let d of dots){
