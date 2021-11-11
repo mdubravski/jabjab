@@ -41,6 +41,7 @@ main{
     width: 80px;
     font-family: consolas, monospace;
     margin: 2rem;
+    margin-bottom: 0;
     font-size: 14px;
     background-color: var(--yellow);
     border: none;
@@ -65,12 +66,15 @@ main{
     background-color: #fff;
     margin: 2rem;
     border: black 4px solid;
+    border-radius: 4px;
+
 }
 
 .dice__inside{
     height: 180px;
     width: 180px;
     border: black 4px solid;
+    border-radius: 4px;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -131,6 +135,14 @@ main{
     display: block;
 }
 
+@keyframes spin{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(720);}
+}
+
+.spin{
+    animation: spin 0.3s ease;
+}
 
 
 

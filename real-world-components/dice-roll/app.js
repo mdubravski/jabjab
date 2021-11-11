@@ -13,6 +13,7 @@ const dots = document.querySelectorAll('.dice__dot');
 
 rollBtn.addEventListener('click', () => {
     const roll = rollDice();
+    document.querySelector(".dice").classList.toggle("spin");
    // console.log(roll);
     
     // reset styling
