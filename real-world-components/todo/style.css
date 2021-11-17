@@ -67,3 +67,8 @@ label{
 .todo__body{
     overflow-y: scroll;
 }
+
+.todo__done{
+    text-decoration: line-through;
+    color: #aaa;
+}
