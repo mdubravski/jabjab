@@ -24,7 +24,7 @@ body{
     grid-template-columns: repeat(1,400px);
     height: 500px;
     padding: 1.5rem;
-    
+    border-radius: 4px;
 }
 
 .todo__head{
@@ -59,13 +59,14 @@ label{
 }
 
 .todo__list{
-    list-style: disc;
+    list-style: none;
     font-size: 20px;
     margin-left: 1.5rem;
 }
 
 .todo__body{
     overflow-y: scroll;
+    ;
 }
 
 .todo__done{

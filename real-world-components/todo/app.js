@@ -21,14 +21,5 @@ function createListItem(text){
     return newListElement;
 }
 
-function toggleDone(){
-    console.log(todo_items);
-    for(let el of todo_items){
-        el.addEventListener('click', () =>{
-            el.classList.toggle('todo__done');
-        });
-    }
-}
 
-toggleDone();
 addListItem();

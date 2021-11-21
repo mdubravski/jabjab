@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container{
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .todo{
+            margin-top: 2rem;
+            padding: 2rem 4rem;
+            border-radius: 4px;
+            background-color: #2c2c32;
+            width: 90%;
+            min-width: 480px;
+            height: 600px;
+            color: white;
+            overflow-y: scroll;
+        }
+
+        .todo__header{
+            padding: 1rem 0;
+
+        }
+
+        .todo__title{
+            margin: 1rem;
+            text-align: center;
+        }
+
+        .todo__text{
+            text-align: center;
+            padding: 1rem 1.2rem;
+        }
+
+        .todo__input{
+            width: 100%;
+            border-radius: 4px;
+            padding: 1rem 1.2rem;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .todo__item{
+            list-style: none;
+            padding: 1rem 1.2rem;
+            border-bottom: 2px solid #d49a3f;
+        }
+
+        .todo__item:hover{
+            cursor: default;
+        }
+
+        .todo__done{
+            text-decoration: line-through;
+            color: #aaa;
+            border-bottom: 2px solid rgb(65,52,32);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="todo">
+                <div class="todo__header">
+                    <h1 class="todo__title">To Do</h1>
+                    <h4 class="todo__text">Click todo to toggle done, Double click todo to remove.</h4>
+                    <label for="todo input">
+                        <input type="text" class="todo__input" placeholder="enter a todo">
+                    </label>
+                </div>
+                <div class="todo__body">
+                    <ul class="todo__list">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+         const todoInput = document.querySelector('.todo__input');
+         const todoList = document.querySelector('.todo__list');
+         const todoItems = document.querySelectorAll('.todo__item');
+
+         function addListItem(){
+            todoInput.addEventListener('keypress', (event) => {
+                if(event.keyCode === 13){
+                    todoList.insertBefore(makeListItem(todoInput.value), todoList.childNodes[0]);
+                    todoInput.value = '';
+                }
+
+            });
+         }
+
+        // DOES NOT WORK BC OF BUBBLING AND PROPIGATION
+        //  function toggleDone(){
+        //      for(let l of todoItems){
+        //          l.addEventListener('click', () => {
+        //              l.classList.toggle('todo__done');
+        //          });
+        //      }
+        //  }
+
+        function toggleDone(){
+            todoList.addEventListener('click', (event) => {
+                if(event.target.classList.contains('todo__item')){
+                    event.target.classList.toggle('todo__done');
+                }
+            });
+        }
+
+        function removeListItem(){
+            todoList.addEventListener('dblclick', (event) => {
+                todoList.removeChild(event.target)
+            })
+        }
+
+         function makeListItem(text){
+             const newListElement = document.createElement('li');
+             newListElement.textContent = text;
+             newListElement.classList.add('todo__item');
+             return newListElement;
+         }
+         
+         toggleDone();
+         removeListItem();
+         addListItem();
+    </script>
+</body>
+</html>
