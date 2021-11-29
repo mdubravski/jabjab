@@ -1,0 +1,37 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.loading-bar {
+    background-color: black;
+    width: 100%;
+}
+
+.loading-bar__item {
+    width: 0%;
+    height: 4px;
+    background-color: red;
+}
+
+.btn__containter{
+    display: flex;
+    justify-content: space-around;
+    padding: 1.2rem;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 40px;
+    background-color: #855ffb;
+    
+}
+
+.btn:hover{
+    background-color: #a88dfc;
+    cursor: pointer;
+}
