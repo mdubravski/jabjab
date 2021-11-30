@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <button>submit</button>
+    <script>
+        // *** ES5 ***
+
+        // function declaration
+        function add(a, b) {
+            console.log(2 + 2);
+        }
+        add(); // call function
+
+        // function expression
+        let add1 = function () {
+            console.log(3 + 3);
+        }
+        add1();
+
+        // anonymous function 
+        document.querySelector('button').addEventListener('click', function () {
+            console.log('you clicked!');
+        });
+
+        // *** ES6 ***
+
+        // function expression
+        let add2 = (a, b) => {
+            console.log(a + b);
+        }
+        add2(4, 4);
+
+        // function expression w/o parameters (use '_')
+        let add3 = _ => {
+            console.log(5 + 5);
+        }
+        add3();
+
+        // function expression w/ 1 parameter
+        let add4 = x => {
+            console.log(x + 6);
+        }
+        add4(6);
+
+        // implicit returns
+        let add5 = x => console.log(x + 7);
+        add5(7);
+
+        let multiply = (x, y) => console.log(x * y);
+        multiply(8, 8);
+
+        // anonymous function 
+        document.querySelector('button').addEventListener('click', () => alert('hi'));
+    </script>
+</body>
+
+</html>
