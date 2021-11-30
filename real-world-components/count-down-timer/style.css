@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+main{
+    margin-top: 1rem;
+}
+
+.container{
+    min-width: 760px;
+    margin: 0 auto;
+}
+
+.timer{
+    background: black;
+    border-radius: 4px;
+    padding: 2rem;
+    height: 500px;
+}
+
+.timer__header{
+    color: #fff;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.timer__body{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.timer__day,
+.timer__hour,
+.timer__minute,
+.timer__second{
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px dashed white;
+    padding: 2rem;
+}
+
+.timer__label{
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.timer__input{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.timer__input label{
+    padding-right: 1rem;
+}
