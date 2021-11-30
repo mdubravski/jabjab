@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword and Arrow Functions</title>
+</head>
+
+<body>
+
+    <script>
+        console.log(this); // window 
+
+        function func() {
+            console.log(this); // window
+        }
+        func();
+
+        const person = {
+            name: 'Michael',
+            age: 22,
+            profession: 'Software Developer',
+            intro: function () {
+                console.log(this); // object
+            },
+            changeAge: function (age) {
+                this.age = age; // object
+            },
+            displayName: () => {
+                console.log(
+                    `Name: ${this.name}`); // will refer to window obj, this is because of ES6 synxax
+            },
+            displayProfession: function () {
+                console.log(`Profession: ${this.profession}`);
+            }
+        }
+        person.intro();
+        person.changeAge(25);
+        console.log(person.age);
+        person.displayName();
+        person.displayProfession();
+    </script>
+</body>
+
+</html>
