@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest vs Spread</title>
+</head>
+
+<body>
+    <script>
+        // rest and spread operator = ...
+        // rest = converts list of comma seperated values into an array
+        // spread = converts from array to comma seperated values
+
+        // using arguments keyword
+        function adder() {
+            let total = 0;
+            for (let elem of arguments) {
+                total += elem;
+            }
+            console.log(total);
+        }
+        adder(2, 2, 5, 6, 7, 8);
+
+        // using rest operator
+        function adder1(...values) {
+            let total = 0;
+            for (let elem of values) {
+                total += elem;
+            }
+            console.log(total);
+        }
+        adder1(2, 2, 5, 6, 7, 8);
+
+        // using spread operator
+        let nums = [1, 2, 3, 4, 5, 6, 7];
+        let total = [];
+
+        total.push(...nums);
+        console.log(total);
+    </script>
+</body>
+
+</html>
