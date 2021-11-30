@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Function Argumnets</title>
+</head>
+
+<body>
+
+    <script>
+        // *** ES5 ***
+
+        // function displayEdu(college) {
+        //     if (!college) {
+        //         console.log('No Collge Degree Information Provided');
+        //     } else {
+        //         console.log(college);
+        //     }
+
+        //     !college ? console.log('No Collge Degree Information Provided') : console.log(college);
+        // }
+
+        // ** ES6 ***
+
+        // default function arguments
+        function displayEdu(college = 'No College Degree Information Provided') {
+            console.log(college);
+        }
+
+        displayEdu('Dickinson College') // prints Dickinson College
+        displayEdu(); // will print undefined unless handeled
+    </script>
+</body>
+
+</html>
