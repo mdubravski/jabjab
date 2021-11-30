@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Objects</title>
+</head>
+
+<body>
+    <script>
+        // Destructuring Objects = easier way to access values in properties and objects
+
+        const person = {
+            fullName: 'Michael Dubravski',
+            age: 22,
+            hobbies: ['kayacking', 'skiing', 'guitar'],
+            address: {
+                main: '123 main street',
+                apt: "unit 4",
+                zip: 43256
+            }
+        }
+
+        // destructuring object
+        const {
+            fullName,
+            age,
+            address
+        } = person;
+
+        // destructuring object and defining new variable
+        const {
+            fullName: name
+        } = person;
+
+        console.log(fullName);
+        console.log(name);
+        console.log(age);
+        console.log(address);
+    </script>
+</body>
+
+</html>
