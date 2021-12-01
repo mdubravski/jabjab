@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Level Object Literals</title>
+</head>
+
+<body>
+
+    Name:
+    <input type="text" id="name">
+    <br>
+    <br>
+    Email:
+    <input type="email" id="email">
+    <br>
+    <br>
+    <button>submit</button>
+    <script>
+        function displayInfo() {
+            const nameEl = document.querySelector('#name');
+            const emailEl = document.querySelector('#email');
+            const buttonEl = document.querySelector('button');
+
+            buttonEl.addEventListener('click', () => {
+                let name = nameEl.value;
+                let email = emailEl.value;
+                let result = {
+                    name: name,
+                    email: email,
+                }
+                console.log(result);
+            });
+        }
+        displayInfo();
+
+        // ES5 Object Literals
+
+        let obj = {};
+        obj.name = 'Micahel';
+        obj.age = 29;
+        obj.talk = function () {
+            console.log("Hello there!");
+        }
+
+        let human = {
+            name: 'Peter',
+            age: 24,
+            talk: function () {
+                console.log('Hello again!');
+            }
+        }
+
+        // ES6 Object Literals
+        let a = 'alpha';
+        let b = 'beta';
+        let c = 'charlie';
+
+        let animal = {
+            a,
+            b,
+            c,
+            d: 'hard coded value',
+            // es6 method shorthand
+            talk() {
+                console.log('Hello again again');
+            },
+        }
+
+        console.log(animal);
+        animal.talk();
+    </script>
+</body>
+
+</html>
