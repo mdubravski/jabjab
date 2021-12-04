@@ -7,11 +7,13 @@ function Car(make, model) {
 // prototype
 Car.prototype.stats = function () {
     return `${this.make} ${this.model}`;
-}
+};
 
 Car.prototype.drive = function () {
     return `${this.stats()} is driving.`;
-}
+};
+
+Car.prototype.wheels = 4;
 
 // creating objects
 
