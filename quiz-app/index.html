@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="container">
+            <div class="quiz">
+                <div class="quiz__header">
+                    <div class="quiz__question__box">
+                        <div class="quiz__question">
+                            <h1>Who is the first president of the USA?</h1>
+                        </div>
+                        <div class="quiz__tracker">1 of 7</div>
+                        <div class="quiz__progress__bar">
+                            <div class="quiz__progress__bar__inner"></div>
+                        </div>
+                        <div class="quiz__tagline">Choose your answer!</div>
+                    </div>
+                    <div class="quiz__choices__box">
+                        <ul class="quiz__choices">
+                            <li class="quiz__choice">
+                                <input id="choice__0" type="radio" name="choice" class="quiz__input" checked>
+                                <label for="choice__0" class="quiz__label">
+                                    <i></i>
+                                    Martin Luther King Jr.
+                                </label>
+                            </li>
+                            <li class="quiz__choice">
+                                <input id="choice__1" type="radio" name="choice" class="quiz__input">
+                                <label for="choice__1" class="quiz__label">
+                                    <i></i>
+                                    Michael Jackson
+                                </label>
+                            </li>
+                            <li class="quiz__choice">
+                                <input id="choice__2" type="radio" name="choice" class="quiz__input">
+                                <label for="choice__2" class="quiz__label">
+                                    <i></i>
+                                    Andrew Jackson
+                                </label>
+                            </li>
+                            <li class="quiz__choice">
+                                <input id="choice__3" type="radio" name="choice" class="quiz__input">
+                                <label for="choice__3" class="quiz__label">
+                                    <i></i>
+                                    Michael Dubravski
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="quiz__footer">
+                    <button class="button button--bordered next">Next</button>
+                    <button class="button button--bordered restart">Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
