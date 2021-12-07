@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 import Question from "./Question.js";
 import Quiz from "./Quiz.js";
 
@@ -19,10 +20,28 @@ const App = (() => {
     const q2 = new Question('When was Javascript Created?', [2019, 2007, 1984, 2010], 3);
     const q3 = new Question('What does CSS stand for?', ['County Sheriff Service', 'Cascasing Style Sheet', 'Cool Silver Submarines', 'Cold Sinus Stuff'], 1);
     const q4 = new Question('What Does HTML stand for?', ['Hyper Text Markup Language', 'How To Make Logs', 'Howard Town Master Logo', 'House Tools Main Leg'], 0);
-    const q5 = new Question('What is 2 + 2', [4, 1, 6, 'NaN'], 0);
+    const q5 = new Question('What is 2 + 2?', [4, 1, 6, 'NaN'], 0);
 
     // make quiz
     let quiz = new Quiz([q1, q2, q3, q4, q5]);
+
+    // handle event listeners
+    const listeners = _ => {
+        nextButtonEl.addEventListener('click', () => {
+            const selectedElem = document.querySelector('input[name="choice"]:checked');
+            if (selectedElem) {
+                const key = Number(selectedElem.getAttribute('data-order'));
+                quiz.guess(key);
+                renderAll();
+            }
+        });
+
+        restartButtonEl.addEventListener('click', () => {
+            quiz.reset();
+            nextButtonEl.style.opacity = 1;
+            renderAll();
+        });
+    };
 
     const setValue = (elem, value) => {
         elem.innerHTML = value;
@@ -38,7 +57,7 @@ const App = (() => {
         currentChoices.forEach((elem, index) => {
             markup += `
                 <li class="quiz__choice">
-                    <input id="choice__${index}" type="radio" name="choice" class="quiz__input">
+                    <input id="choice__${index}" data-order="${index}" type="radio" name="choice" class="quiz__input">
                     <label for="choice__${index}" class="quiz__label">
                     <i></i>
                         <span>${elem}</span>
@@ -51,22 +70,22 @@ const App = (() => {
 
     const renderTracker = _ => {
         setValue(trackerEl, `${quiz.curIndex} of ${quiz.questions.length}`);
-    }
+    };
 
     const getPercentage = (numerator, denom) => {
         return Math.round((numerator / denom) * 100);
-    }
+    };
 
     const launch = (width, maxPercent) => {
         let loadingBar = setInterval(() => {
-            if(width > maxPercent){
+            if (width > maxPercent) {
                 clearInterval(loadingBar);
-            }else{
+            } else {
                 width++;
                 progressInnerEl.style.width = `${width}%`;
             }
-        }, 10);
-    }
+        }, 5);
+    };
 
     const renderProgress = _ => {
         // 1. get width
@@ -74,13 +93,20 @@ const App = (() => {
         // 2.make bar go from 0 -> width
         launch(0, currentWidth);
     };
-    
 
+    const renderEndScreen = _ => {
+        setValue(quizQuestionEl, 'Great Job!');
+        setValue(taglineEl, 'Complete');
+        setValue(trackerEl, `Your socre: ${getPercentage(quiz.score, quiz.questions.length)}%`);
+        nextButtonEl.style.opacity = 0;
+        renderProgress();
+    };
 
     // render DOM
     const renderAll = _ => {
         if (quiz.hasEnded()) {
-            // renderEndScreen()
+            // render end screen
+            renderEndScreen();
         } else {
             // render question
             renderQuestion();
@@ -94,8 +120,10 @@ const App = (() => {
     };
 
     return {
-        renderAll: renderAll
+        renderAll: renderAll,
+        addListeners: listeners
     };
 })();
 
 App.renderAll();
+App.addListeners();

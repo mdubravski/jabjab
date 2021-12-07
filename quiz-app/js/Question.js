@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 /**
  * Function constructor for Question class
  * @param {String} question the qestion to be asked

@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 export default function Quiz(questions) {
     this.questions = questions;
     this.score = 0;
@@ -20,4 +21,10 @@ Quiz.prototype.guess = function (userGuess) {
     if (this.getCurrentQuestion().isCorrect(userGuess)) {
         this.score++;
     }
+    this.nextIndex();
+};
+
+Quiz.prototype.reset = function() {
+    this.score = 0;
+    this.curIndex = 0;
 };
