@@ -1,85 +1,65 @@
 export const songsList = [{
     "id": "1",
-    "url": "../../music/nice-for-what.mp3",
-    "time": "04:22",
-    "title": "Nice For What",
-    "artist": "Drake"
+    "url": "../../music/China Cat Sunflower (Live at Olympia Theatre, Paris, France 5_3_1972.mp4)",
+    "time": "05:36",
+    "title": "China Cat Sunflower (Live at Olympia Theatre, Paris, France 5_3_1972.mp4)",
+    "artist": "Grateful Dead"
   },
   {
     "id": "2",
-    "url": "../../music/gods-plan.mp3",
-    "time": "03:19",
-    "title": "God's Plan",
-    "artist": "Drake"
+    "url": "../../music/He's Gone (Live at Concertgebouw, Amsterdam, Holland 5_10_1972).mp4",
+    "time": "07:33",
+    "title": "He's Gone (Live at Concertgebouw, Amsterdam, Holland 5_10_1972)",
+    "artist": "Grateful Dead"
   },
   {
     "id": "3",
-    "url": "../../music/professional-rapper.mp3",
-    "time": "05:52",
-    "title": "Professional Rapper ft. Snoop Dog",
-    "artist": "Lil Dicky"
+    "url": "../../music/I Know You Rider (Live at Olympia Theatre, Paris, France 5_3_1972).mp4",
+    "time": "05:34",
+    "title": "I Know You Rider (Live at Olympia Theatre, Paris, France 5_3_1972)",
+    "artist": "Grateful Dead"
   },
   {
     "id": "4",
-    "url": "../../music/yellow.mp3",
-    "time": "04:29",
-    "title": "Yellow",
-    "artist": "Coldplay"
+    "url": "../../music/Jack Straw (Live at Olympia Theatre, Paris, France 5_3_1972).mp4",
+    "time": "05:23",
+    "title": "Jack Straw (Live at Olympia Theatre, Paris, France 5_3_1972)",
+    "artist": "Grateful Dead"
   },
   {
     "id": "5",
-    "url": "../../music/get-lucky.mp3",
-    "time": "06:09",
-    "title": "Get Lucky",
-    "artist": "Daft Punk"
+    "url": "../../music/Mr. Charlie (Live at Lyceum, London, England 5_23_1972).mp4",
+    "time": "03:49",
+    "title": "Mr. Charlie (Live at Lyceum, London, England 5_23_1972)",
+    "artist": "Grateful Dead"
   },
   {
     "id": "6",
-    "url": "../../music/shape-of-my-heart.mp3",
-    "time": "04:43",
-    "title": "Shape Of My Heart",
-    "artist": "Sting"
+    "url": "../../music/One More Saturday Night (Live at Lyceum, London, England 5_26_1972).mp4",
+    "time": "05:09",
+    "title": "One More Saturday Night (Live at Lyceum, London, England 5_26_1972)",
+    "artist": "Grateful Dead"
   },
   {
     "id": "7",
-    "url": "../../music/seven-days.mp3",
-    "time": "03:57",
-    "title": "7 days",
-    "artist": "craig David"
+    "url": "../../music/Ramble on Rose (Live at Lyceum, London, England 5_26_1972).mp4",
+    "time": "06:21",
+    "title": "Ramble on Rose (Live at Lyceum, London, England 5_26_1972)",
+    "artist": "Grateful Dead"
   },
   {
     "id": "8",
-    "url": "../../music/dilemma.mp3",
-    "time": "04:42",
-    "title": "Nelly Dilemma ft. keylly Rowland",
-    "artist": "Nelly"
+    "url": "../../music/Tennessee Jed (Live at Olympia Theatre, Paris, France 5_3_1972).mp4",
+    "time": "07:32",
+    "title": "Tennessee Jed (Live at Olympia Theatre, Paris, France 5_3_1972)",
+    "artist": "Grateful Dead"
   },
   {
     "id": "9",
-    "url": "../../music/psycho.mp3",
-    "time": "03:57",
-    "title": "Post Malone Psycho Ft. Ty Dolla",
-    "artist": "Post malone"
+    "url": "../../music/You Win Again (Live at Lyceum, London, England 5_24_1972).mp4",
+    "time": "04:14",
+    "title": "You Win Again (Live at Lyceum, London, England 5_24_1972)",
+    "artist": "Grateful Dead"
   },
-  {
-    "id": "10",
-    "url": "../../music/congratulations.mp3",
-    "time": "03:40",
-    "title": "Congratulations ft. Quavo",
-    "artist": "Post Malone"
-  },
-  {
-    "id": "11",
-    "url": "../../music/rockstar.mp3",
-    "time": "04:01",
-    "title": "Rockstar",
-    "artist": "Post Malone"
-  },
-  {
-    "id": "12",
-    "url": "../../music/sad.mp3",
-    "time": "02:46",
-    "title": "Sad",
-    "artist": "XXXtentacion"
-  },
+  
 ];
