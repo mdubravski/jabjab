@@ -1,22 +1,22 @@
 export const songsList = [{
     "id": "1",
-    "url": "../../music/China Cat Sunflower (Live at Olympia Theatre, Paris, France 5_3_1972.mp4)",
+    "url": "../../music/China Cat Sunflower (Live at Olympia Theatre, Paris, France 5_3_1972).mp4",
     "time": "05:36",
-    "title": "China Cat Sunflower (Live at Olympia Theatre, Paris, France 5_3_1972.mp4)",
+    "title": "China Cat Sunflower (Live at Olympia Theatre, Paris, France 5_3_1972)",
     "artist": "Grateful Dead"
   },
   {
     "id": "2",
-    "url": "../../music/He's Gone (Live at Concertgebouw, Amsterdam, Holland 5_10_1972).mp4",
-    "time": "07:33",
-    "title": "He's Gone (Live at Concertgebouw, Amsterdam, Holland 5_10_1972)",
+    "url": "../../music/I Know You Rider (Live at Olympia Theatre, Paris, France 5_3_1972).mp4",
+    "time": "05:34",
+    "title": "I Know You Rider (Live at Olympia Theatre, Paris, France 5_3_1972)",
     "artist": "Grateful Dead"
   },
   {
     "id": "3",
-    "url": "../../music/I Know You Rider (Live at Olympia Theatre, Paris, France 5_3_1972).mp4",
-    "time": "05:34",
-    "title": "I Know You Rider (Live at Olympia Theatre, Paris, France 5_3_1972)",
+    "url": "../../music/He's Gone (Live at Concertgebouw, Amsterdam, Holland 5_10_1972).mp4",
+    "time": "07:33",
+    "title": "He's Gone (Live at Concertgebouw, Amsterdam, Holland 5_10_1972)",
     "artist": "Grateful Dead"
   },
   {
