@@ -1,13 +1,13 @@
-import {
-    songsList
-} from '../data/songs.js';
+import {songsList} from '../data/songs.js';
+import PlayInfo from './play-info.js';
+import TrackBar from './track-bar.js';
+
 const Playlist = (_ => {
 
     // data/state
     let songs = songsList;
     let curPlayingIndex = 0;
     let currentSong = new Audio(songs[curPlayingIndex].url);
-    let isPlaying = false;
 
     //cache DOM
     const playListEl = document.querySelector('.playlist');
@@ -15,6 +15,10 @@ const Playlist = (_ => {
     const init = _ => {
         render();
         listeners();
+        PlayInfo.setState({
+            songsLength: songs.length,
+            isPlaying: !currentSong.paused
+        });
     };
 
     const render = _ => {
@@ -56,6 +60,10 @@ const Playlist = (_ => {
             changeAudioSrc();
             togglePlayPause();
         }
+        PlayInfo.setState({
+            songsLength: songs.length,
+            isPlaying: !currentSong.paused
+        });
     };
 
     const changeAudioSrc = _ => {
@@ -81,8 +89,13 @@ const Playlist = (_ => {
                 const listElem = event.target.parentNode.parentNode;
                 const listElemIndex = [...listElem.parentElement.children].indexOf(listElem);
                 mainPlay(listElemIndex);
+                
                 render();
             }
+        });
+
+        currentSong.addEventListener('timeupdate', _ => {
+            TrackBar.setState(currentSong);
         });
 
         currentSong.addEventListener('ended', _ => {
@@ -90,8 +103,14 @@ const Playlist = (_ => {
         });
     };
 
+    const flip = _ => {
+        togglePlayPause();
+        render();
+    };
+
     return {
-        init
+        init,
+        flip
     };
 })();
 

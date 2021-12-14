@@ -39,7 +39,7 @@ button{
 
 .button.is-green{
     background: var(--light-green);
-    color: var(--font-main-stack);
+    color: var(--main-font-color);
 }
 
 .app{
