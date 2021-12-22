@@ -1,5 +1,7 @@
+/*jshint esversion: 6 */
 import Home from "./home.js";
 import { sound } from './../data/sound.js';
+import End from './end.js';
 
 const Game = (_ => {
     // state
@@ -106,17 +108,22 @@ const Game = (_ => {
     };
 
     const hasWon = _ => guessWord.join('') === chosenWord;
-
     const hasLost = _ => lives <= 0;
 
     const isGameOver = _ => {
         if(hasWon()){
             sound.win.play();
-            alert('Win');
+            End.setState({
+                chosenWord,
+                result: 'win'
+            });
         }
         if(hasLost()){
             sound.lose.play();
-            alert('Lose');
+            End.setState({
+                chosenWord,
+                result: 'lose'
+            });
         }
     }
 
