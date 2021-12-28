@@ -23,6 +23,7 @@ const mix = (callback) => {
     }, 2000);
 };
 
+// async operiations happening synchronus
 function eatRamen(){
     boilWater((elem) => {
         console.log(elem);
