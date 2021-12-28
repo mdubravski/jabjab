@@ -2,6 +2,7 @@
 import Home from "./home.js";
 import { sound } from './../data/sound.js';
 import End from './end.js';
+import Board from './board.js';
 
 const Game = (_ => {
     // state
@@ -26,6 +27,8 @@ const Game = (_ => {
         showInitPage();
         // run event listeners
         listeners();
+        // initialize board
+        Board.init();
     };
 
     // choose random word 
@@ -88,6 +91,7 @@ const Game = (_ => {
             updateGuessWord(letter);
         }else{
             lives--;
+            Board.setLives(lives);
         }
         render();
         isGameOver();
@@ -125,7 +129,7 @@ const Game = (_ => {
                 result: 'lose'
             });
         }
-    }
+    };
 
     return {
         init
