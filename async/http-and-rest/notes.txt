@@ -1,0 +1,47 @@
+How the web works:
+    -You (client) send HTTP request to Twitter (server) which sends 
+     HTTP response back to you.
+    -Server is connected to database (tweets, pictures, comments)
+
+HTTP:   
+    -Hyper Text Transfer Protocol
+    -A set of rules that all clients and servers have to follow
+
+    -Request Method Types: CRUD
+        POST -> (Create)
+        GET -> (Read)
+        PUT -> (Update)
+        DELETE -> (Delete)
+
+API:
+    -Application Programming Interface
+    -A set of rules that allow a pieces of software to talk to eachother.
+
+    -Examples
+        Google Maps API:
+            -Uber, Lyft and thousands of mopre companies use google maps API
+        Twilio API:
+            -Airbnb, Dell, Hulu, Yelp, Sony etc, us this API to 
+             send sutomated messages/alerts to customers
+
+API on the Web:
+    -We create an API on the server side
+    -Client makes requests to the server using this API
+    -Server reads the request and talks to the database,
+     gets data, and sends response back to client
+
+REST API:
+    -REpresentational State Transfer
+    -An architectural style we follow to create the 
+     aformentioned API on the server side.
+
+API Tracking && Authentication
+    -API Keys
+    -oAuth
+    -JSON Web Tokens
+
+
+
+
+
+
